@@ -82,3 +82,7 @@ where $A$ is area in m² and $r$ is the rate (currency units per m²). The app r
 - Do not hit Nominatim excessively; for production use consider a paid geocoding service or deploy your own instance and follow usage policies.
 - Keep any API keys out of source control. Use environment-specific configuration (e.g., a server endpoint that injects keys) if you must use keys.
 - The app expects to be served from the project root so module imports (e.g., `../config.js`) resolve correctly.
+
+## GeoJSON 
+
+After drawing a polygon on the map, users can download the digitized boundary as a GeoJSON file using the “Download GeoJSON” button next to the search bar.
