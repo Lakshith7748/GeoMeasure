@@ -50,14 +50,17 @@ body {
 
 
 #suggestions {
-  background: white;
   position: absolute;
-  width: 100%;
+  top: 45px; 
+  left: 0;
+  right: 0;
+  background: white;
   max-height: 200px;
   overflow-y: auto;
   border: 1px solid #ccc;
   border-radius: 6px;
   z-index: 9999;
+  width: 100%;
 }
 
 .suggestion-item {
