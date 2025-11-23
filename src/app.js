@@ -38,7 +38,7 @@ const drawControl = new L.Control.Draw({
     polygon: {
       allowIntersection: false,
       showArea: true,
-      showLenghth: true,
+      showLength: true,
       drawError: { color: "#e74c3c", message: "Invalid polygon" }
     }
   },
@@ -70,4 +70,27 @@ map.on('draw:deleted', () => {
   document.getElementById("Location-info").innerHTML = ``
 })
 
+document.getElementById("download-geojson").addEventListener("click", () => {
+  const layers = drawnItems.getLayers();
+  if (layers.length === 0) {
+    alert("No polygon drawn!");
+    return;
+  }
+
+  const layer = layers[0];
+  const geojson = layer.toGeoJSON();
+
+  const blob = new Blob([JSON.stringify(geojson, null, 2)], {
+    type: "application/json"
+  });
+
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "property.geojson";
+  a.click();
+  URL.revokeObjectURL(url);
+});
+
 initSearchBar()
+

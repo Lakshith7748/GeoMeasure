@@ -8,25 +8,46 @@ body {
   height: 100vh;
   width: 100vw;
 }
-
 #search-container {
   position: absolute;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-
-  width: 320px;
   z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#search-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
 }
 
 #search-input {
-  width: 100%;
-  padding: 10px 14px;
+  width: 300px; /* adjust if needed */
+  padding: 8px 12px;
   border-radius: 6px;
-  border: 1px solid #aaa;
-  font-size: 15px;
-  outline: none;
+  border: 1px solid #ccc;
 }
+
+#download-geojson {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+#download-geojson:hover {
+  background-color: #0056b3;
+}
+
 
 #suggestions {
   background: white;
