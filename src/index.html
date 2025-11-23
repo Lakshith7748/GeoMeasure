@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>GeoMeasure India</title>
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/128/8672/8672237.png" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="search-container">
+    <input id="search-input" type="text" placeholder="Search for a place..." />
+    <div id="suggestions"></div>
+  </div>
+
+  <div id="info-box">
+    <p>Click on the polygon Icon (⬟) to create your Polygon</p>
+    <div id="Location-info"></div>
+  </div>
+
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+  <script src="https://unpkg.com/@turf/turf/turf.min.js"></script>
+
+ 
+  <script src="https://cdn.jsdelivr.net/npm/leaflet-editable@1.2.0/src/Leaflet.Editable.js"></script>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
